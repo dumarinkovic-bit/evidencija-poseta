@@ -17,161 +17,41 @@
     --gray-border: rgba(0,0,0,0.12);
     --text: #1a1a1a;
     --text-muted: #6b6b6b;
-    --text-hint: #aaa;
     --white: #fff;
     --radius: 10px;
     --danger: #E24B4A;
   }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--gray-bg);
-    color: var(--text);
-    min-height: 100vh;
-    padding-bottom: 40px;
-  }
-  header {
-    background: var(--teal);
-    padding: 16px 20px 14px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--gray-bg); color: var(--text); min-height: 100vh; padding-bottom: 40px; }
+  header { background: var(--teal); padding: 16px 20px 14px; position: sticky; top: 0; z-index: 10; }
   header h1 { color: var(--teal-light); font-size: 17px; font-weight: 600; }
   header p { color: #9FE1CB; font-size: 13px; margin-top: 2px; }
-
-  .card {
-    background: var(--white);
-    border-radius: var(--radius);
-    margin: 12px 14px 0;
-    padding: 16px;
-    border: 0.5px solid var(--gray-border);
-  }
-  .card-title {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
+  .card { background: var(--white); border-radius: var(--radius); margin: 12px 14px 0; padding: 16px; border: 0.5px solid var(--gray-border); }
+  .card-title { font-size: 13px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 14px; display: flex; align-items: center; gap: 7px; }
   .card-title svg { flex-shrink: 0; }
-
-  label {
-    display: block;
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 5px;
-    margin-top: 14px;
-  }
+  label { display: block; font-size: 13px; color: var(--text-muted); margin-bottom: 5px; margin-top: 14px; }
   label:first-child { margin-top: 0; }
-  input, select, textarea {
-    width: 100%;
-    font-size: 15px;
-    padding: 10px 12px;
-    border: 1px solid var(--gray-border);
-    border-radius: 8px;
-    background: var(--gray-bg);
-    color: var(--text);
-    font-family: inherit;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-    transition: border-color 0.15s;
-  }
-  input:focus, select:focus, textarea:focus {
-    border-color: var(--teal-mid);
-    background: var(--white);
-  }
+  input, select, textarea { width: 100%; font-size: 15px; padding: 10px 12px; border: 1px solid var(--gray-border); border-radius: 8px; background: var(--gray-bg); color: var(--text); font-family: inherit; appearance: none; -webkit-appearance: none; outline: none; transition: border-color 0.15s; }
+  input:focus, select:focus, textarea:focus { border-color: var(--teal-mid); background: var(--white); }
   textarea { resize: vertical; min-height: 80px; line-height: 1.5; }
   select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b6b6b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; padding-right: 36px; }
-
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-  .chip {
-    padding: 7px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    border: 1px solid var(--gray-border);
-    color: var(--text-muted);
-    background: var(--white);
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.15s;
-  }
-  .chip.selected {
-    background: var(--teal-light);
-    border-color: var(--teal-mid);
-    color: var(--teal-dark);
-    font-weight: 500;
-  }
-
+  .chip { padding: 7px 14px; border-radius: 20px; font-size: 14px; border: 1px solid var(--gray-border); color: var(--text-muted); background: var(--white); cursor: pointer; user-select: none; transition: all 0.15s; }
+  .chip.selected { background: var(--teal-light); border-color: var(--teal-mid); color: var(--teal-dark); font-weight: 500; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-
-  .expense-row {
-    display: grid;
-    grid-template-columns: 1fr 110px;
-    gap: 10px;
-    align-items: end;
-    margin-bottom: 10px;
-  }
+  .expense-row { display: grid; grid-template-columns: 1fr 110px; gap: 10px; align-items: end; margin-bottom: 10px; }
   .expense-row label { margin: 0; }
   .expense-row input { text-align: right; font-variant-numeric: tabular-nums; }
   .ostalo-opis { margin-top: 8px; }
-
-  .total-bar {
-    background: var(--teal-light);
-    border-radius: 8px;
-    padding: 10px 14px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 14px;
-  }
+  .total-bar { background: var(--teal-light); border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
   .total-bar span { font-size: 13px; color: var(--teal-dark); }
   .total-bar strong { font-size: 18px; color: var(--teal); font-variant-numeric: tabular-nums; }
-
-  .btn-submit {
-    display: block;
-    width: calc(100% - 28px);
-    margin: 16px 14px 0;
-    background: var(--teal);
-    color: var(--teal-light);
-    border: none;
-    border-radius: var(--radius);
-    padding: 16px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background 0.15s, transform 0.1s;
-    -webkit-tap-highlight-color: transparent;
-  }
+  .btn-submit { display: block; width: calc(100% - 28px); margin: 16px 14px 0; background: var(--teal); color: var(--teal-light); border: none; border-radius: var(--radius); padding: 16px; font-size: 16px; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.15s, transform 0.1s; -webkit-tap-highlight-color: transparent; }
   .btn-submit:active { background: #0F6E56; transform: scale(0.98); }
   .btn-submit:disabled { background: #ccc; color: #fff; cursor: not-allowed; }
-
-  .toast {
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--text);
-    color: var(--white);
-    padding: 12px 22px;
-    border-radius: 24px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: transform 0.3s ease;
-    z-index: 100;
-    white-space: nowrap;
-    max-width: 90vw;
-    text-align: center;
-  }
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--text); color: var(--white); padding: 12px 22px; border-radius: 24px; font-size: 14px; font-weight: 500; transition: transform 0.3s ease; z-index: 100; white-space: nowrap; max-width: 90vw; text-align: center; }
   .toast.show { transform: translateX(-50%) translateY(0); }
   .toast.success { background: var(--teal); }
   .toast.error { background: var(--danger); }
-
   .req { color: var(--danger); margin-left: 2px; }
 </style>
 </head>
@@ -182,40 +62,28 @@
   <p>Medica Aesthetica</p>
 </header>
 
-<!-- POSETA -->
-<div class="card">
+<div class="card" id="card-poseta">
   <div class="card-title">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
     Podaci o poseti
   </div>
 
   <label>Saradnik <span class="req">*</span></label>
-  <select id="saradnik">
-    <option value="">— Izaberite saradnika —</option>
-    <option>Marija Petrović</option>
-    <option>Nikola Jović</option>
-    <option>Ana Simić</option>
-    <option>Stefan Đorđević</option>
-  </select>
+  <select id="saradnik"></select>
+
+  <label>Datum posete <span class="req">*</span></label>
+  <input type="date" id="datum_posete">
 
   <label>Klijent / ordinacija <span class="req">*</span></label>
   <input type="text" id="klijent" placeholder="Naziv ordinacije ili klijenta" autocomplete="off">
 
   <label>Vrsta posete <span class="req">*</span></label>
-  <div class="chips" id="chips-vrsta">
-    <div class="chip" data-value="Prezentacija">Prezentacija</div>
-    <div class="chip" data-value="Servis / isporuka">Servis / isporuka</div>
-    <div class="chip" data-value="Kontrolna poseta">Kontrolna poseta</div>
-    <div class="chip" data-value="Hladna poseta">Hladna poseta</div>
-    <div class="chip" data-value="Edukacija">Edukacija</div>
-    <div class="chip" data-value="Reklamacija">Reklamacija</div>
-  </div>
+  <div class="chips" id="chips-vrsta"></div>
 
   <label>Napomene / rezime razgovora</label>
   <textarea id="napomene" placeholder="Šta je razgovarano, kakav je bio prijem, posebne napomene..."></textarea>
 </div>
 
-<!-- NAREDNI KORAK -->
 <div class="card">
   <div class="card-title">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
@@ -232,16 +100,11 @@
     </div>
     <div>
       <label>Prioritet</label>
-      <select id="prioritet">
-        <option value="Srednji">Srednji</option>
-        <option value="Visok">Visok</option>
-        <option value="Nizak">Nizak</option>
-      </select>
+      <select id="prioritet"></select>
     </div>
   </div>
 </div>
 
-<!-- TROŠKOVI -->
 <div class="card">
   <div class="card-title">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
@@ -250,19 +113,19 @@
 
   <div class="expense-row">
     <label>Gorivo / kilometraža</label>
-    <input type="number" id="t_gorivo" value="" placeholder="0" min="0" inputmode="numeric">
+    <input type="number" id="t_gorivo" placeholder="0" min="0" inputmode="numeric">
   </div>
   <div class="expense-row">
     <label>Parking i putarine</label>
-    <input type="number" id="t_parking" value="" placeholder="0" min="0" inputmode="numeric">
+    <input type="number" id="t_parking" placeholder="0" min="0" inputmode="numeric">
   </div>
   <div class="expense-row">
     <label>Reprezentacija</label>
-    <input type="number" id="t_reprezentacija" value="" placeholder="0" min="0" inputmode="numeric">
+    <input type="number" id="t_reprezentacija" placeholder="0" min="0" inputmode="numeric">
   </div>
   <div class="expense-row">
     <label>Ostalo</label>
-    <input type="number" id="t_ostalo" value="" placeholder="0" min="0" inputmode="numeric" oninput="toggleOstaloOpis()">
+    <input type="number" id="t_ostalo" placeholder="0" min="0" inputmode="numeric" oninput="toggleOstaloOpis()">
   </div>
   <div id="ostalo_opis_wrap" class="ostalo-opis" style="display:none">
     <input type="text" id="t_ostalo_opis" placeholder="Kratki opis ostalog troška...">
@@ -275,28 +138,83 @@
 </div>
 
 <button class="btn-submit" id="btn-submit" onclick="submitForm()">Sačuvaj posetu</button>
-
 <div class="toast" id="toast"></div>
 
 <script>
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3OwNrPCd1I9NJ0ujQpxQytxvF4MPwZFNPN18AisiIt8InrpFPDKG6RiOuVhfpksY5/exec';
+// ============================================================
+// KONFIGURACIJA — menjaj samo ovde
+// ============================================================
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzer6hZcpDNtL2tiZM9n96WD_W7sva63p4vggGAHUHy4XdDaWZu9pF0qrMbiMlqdmZh/exec';
 
-// Chip selekcija
-document.querySelectorAll('#chips-vrsta .chip').forEach(chip => {
+const SARADNICI = [
+  'Marija Petrović',
+  'Nikola Jović',
+  'Ana Simić',
+  'Stefan Đorđević',
+];
+
+const VRSTE_POSETE = [
+  'Prezentacija',
+  'Servis / isporuka',
+  'Kontrolna poseta',
+  'Hladna poseta',
+  'Edukacija',
+  'Reklamacija',
+];
+
+const PRIORITETI = [
+  'Srednji',
+  'Visok',
+  'Nizak',
+];
+// ============================================================
+// KRAJ KONFIGURACIJE
+// ============================================================
+
+
+// Popuni saradnike
+const selSaradnik = document.getElementById('saradnik');
+selSaradnik.innerHTML = '<option value="">— Izaberite saradnika —</option>';
+SARADNICI.forEach(s => {
+  const o = document.createElement('option');
+  o.textContent = s;
+  selSaradnik.appendChild(o);
+});
+
+// Popuni prioritete
+const selPrioritet = document.getElementById('prioritet');
+PRIORITETI.forEach((p, i) => {
+  const o = document.createElement('option');
+  o.value = p;
+  o.textContent = p;
+  selPrioritet.appendChild(o);
+});
+
+// Popuni vrste posete kao chipove
+const chipsWrap = document.getElementById('chips-vrsta');
+VRSTE_POSETE.forEach(v => {
+  const chip = document.createElement('div');
+  chip.className = 'chip';
+  chip.dataset.value = v;
+  chip.textContent = v;
   chip.addEventListener('click', () => {
     document.querySelectorAll('#chips-vrsta .chip').forEach(c => c.classList.remove('selected'));
     chip.classList.add('selected');
   });
+  chipsWrap.appendChild(chip);
 });
+
+// Današnji datum kao default za oba polja
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('datum_posete').value = today;
+document.getElementById('rok').value = today;
 
 // Računanje ukupnog
 const tIds = ['t_gorivo','t_parking','t_reprezentacija','t_ostalo'];
 tIds.forEach(id => document.getElementById(id).addEventListener('input', calcTotal));
 
 function calcTotal() {
-  const total = tIds.reduce((sum, id) => {
-    return sum + (parseFloat(document.getElementById(id).value) || 0);
-  }, 0);
+  const total = tIds.reduce((sum, id) => sum + (parseFloat(document.getElementById(id).value) || 0), 0);
   document.getElementById('ukupno').textContent = total.toLocaleString('sr-RS') + ' RSD';
 }
 
@@ -317,11 +235,13 @@ function getNum(id) { return parseFloat(document.getElementById(id).value) || 0;
 
 async function submitForm() {
   const saradnik = getVal('saradnik');
+  const datum_posete = getVal('datum_posete');
   const klijent = getVal('klijent');
   const selectedChip = document.querySelector('#chips-vrsta .chip.selected');
   const vrsta = selectedChip ? selectedChip.dataset.value : '';
 
   if (!saradnik) { showToast('Molimo izaberite saradnika.', 'error'); return; }
+  if (!datum_posete) { showToast('Unesite datum posete.', 'error'); return; }
   if (!klijent) { showToast('Unesite naziv klijenta.', 'error'); return; }
   if (!vrsta) { showToast('Izaberite vrstu posete.', 'error'); return; }
 
@@ -331,6 +251,7 @@ async function submitForm() {
 
   const payload = {
     saradnik,
+    datum_posete,
     klijent,
     vrsta_posete: vrsta,
     napomene: getVal('napomene'),
@@ -363,11 +284,13 @@ async function submitForm() {
 }
 
 function resetForm() {
-  ['saradnik','klijent','napomene','naredni_korak','rok'].forEach(id => {
-    const el = document.getElementById(id);
-    el.value = id === 'saradnik' ? '' : '';
-  });
-  document.getElementById('prioritet').value = 'Srednji';
+  document.getElementById('saradnik').value = '';
+  document.getElementById('klijent').value = '';
+  document.getElementById('napomene').value = '';
+  document.getElementById('naredni_korak').value = '';
+  document.getElementById('prioritet').value = PRIORITETI[0];
+  document.getElementById('datum_posete').value = new Date().toISOString().split('T')[0];
+  document.getElementById('rok').value = new Date().toISOString().split('T')[0];
   document.querySelectorAll('#chips-vrsta .chip').forEach(c => c.classList.remove('selected'));
   tIds.forEach(id => document.getElementById(id).value = '');
   document.getElementById('t_ostalo_opis').value = '';
@@ -375,10 +298,6 @@ function resetForm() {
   document.getElementById('ukupno').textContent = '0 RSD';
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
-
-// Postavi današnji datum kao default za rok
-const today = new Date().toISOString().split('T')[0];
-document.getElementById('rok').value = today;
 </script>
 </body>
 </html>
