@@ -347,21 +347,13 @@ async function submitForm() {
   };
 
   try {
-    const res = await fetch(SCRIPT_URL, {
-  method: 'POST',
-  mode: 'no-cors',
-  body: JSON.stringify(payload)
-});
-// no-cors ne vraća čitljiv response, pa samo pretpostavljamo uspeh
-showToast('Poseta sačuvana!', 'success');
-resetForm();
-return;
-    if (json.status === 'ok') {
-      showToast('Poseta sačuvana! (' + json.id + ')', 'success');
-      resetForm();
-    } else {
-      showToast('Greška: ' + json.message, 'error');
-    }
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      body: JSON.stringify(payload)
+    });
+    showToast('Poseta sačuvana!', 'success');
+    resetForm();
   } catch (err) {
     showToast('Greška pri slanju. Proveri internet.', 'error');
   } finally {
